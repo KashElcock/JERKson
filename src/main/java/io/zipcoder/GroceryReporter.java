@@ -1,5 +1,7 @@
 package io.zipcoder;
 public class GroceryReporter {
+    private final String fileName;
+
     @Override
     public String toString() {
         return "GroceryReporter{}";
