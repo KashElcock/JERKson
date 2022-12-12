@@ -81,7 +81,6 @@ public class MatchGroupTest {
 
         Assert.assertEquals(expected, actualString);
     }
-
     private String generateStringBuilder(Iterable<Match> matchGroup) {
         StringBuilder sb = new StringBuilder("StringBuilder sb = new StringBuilder()\n");
         for (Match match : matchGroup) {
