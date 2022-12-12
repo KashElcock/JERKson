@@ -11,6 +11,7 @@ import java.util.regex.Pattern;
 
 public class GroceryReporter {
     public static void main(String[] args) {
+
         String[] jerkItems = new GroceryReporter("RawInput.txt").splitFileIntoJerkItems();
         ArrayList<Item> mildItems = new ArrayList<>();
         for (String input : jerkItems) {
@@ -23,7 +24,12 @@ public class GroceryReporter {
             while (m.find()) {
                 switch (m.group(1).toLowerCase()) {
                     case "name":
-                        nameValue = m.group(2);
+                        String[] words = m.group(2).split(" ");
+                        StringBuilder sb = new StringBuilder();
+                        for (String word : words) {
+                            sb.append(word.substring(0, 1).toUpperCase());
+                            sb.append(word.substring(1).toLowerCase());
+                        } nameValue = sb.toString();
                         break;
                     case "price":
                         priceValue = m.group(2);
@@ -64,4 +70,5 @@ public class GroceryReporter {
     public String getOriginalFileText() {
         return originalFileText;
     }
+
 }
