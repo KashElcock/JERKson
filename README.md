@@ -48,3 +48,4 @@ Write a few tests, for each "sub stage" of your code.
 And then finally, for each grocery item, built a quick text output of High/Low and and Average value for the things on the list.
 GOOD LUCK ZIPCODERS!!!! May the Odds be ever in your favor!!!!
 
+
